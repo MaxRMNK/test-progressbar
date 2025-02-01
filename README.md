@@ -12,7 +12,7 @@
 
 Также был предоставлен образец поведения прогресс-бара:
 
-https://maxrmnk.github.io/test-progressbar/gif-preview.gif
+https://github.com/MaxRMNK/test-progressbar/blob/5d90af7367316e45c4a2b6623e7a4e1036982e32/public/gif-preview.gif
 
 ### Напутственное сообщение:
 
