@@ -5,6 +5,7 @@ import classes from './styles.module.scss';
 interface ProgressBarProps {
   progress: number;
   segment?: 1 | 2 | 4 | 5;
+  // Не доделал. Была идея задавать количество сегментов.
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = props => {
@@ -22,7 +23,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
     0, 0, 0, 0,
   ]);
 
-  // const section = [25, 50, 75, 100];
   const segmentPercentage = 100 / 4;
 
   const fillSegment = (index: number) => {
@@ -60,20 +60,15 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
           <div className={clsx(classes['segment-label'])}>
             <div
               className={clsx(classes['segment-fill'])}
-              // style={{ width: `${segmentProgress[index]}%` }}
               style={{
                 clipPath: `polygon(0 0, ${segmentProgress[index]}% 0, ${segmentProgress[index]}% 100%, 0 100%)`,
               }}
+              aria-hidden="true"
             >
               {label}%
             </div>
             {label}%
           </div>
-          {/* <div
-            className={clsx(classes['segment-fill'])}
-            style={{ width: `${segmentProgress[index]}%` }}
-          ></div>
-          <div className={clsx(classes['segment-label'])}>{label}%</div> */}
         </div>
       ))}
     </div>

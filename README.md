@@ -28,10 +28,10 @@
 
 В качестве способа реализации задачи выбран React + TS т.к. в вакансии требовался разработчик на React.
 
-<div align="center" >
+<div align="center" width="200">
   <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="">
 </div>
 
-<div align="center" >
+<div align="center" width="400">
   <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="">
 </div>
