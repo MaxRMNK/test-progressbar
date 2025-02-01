@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'test-progressbar',
+  base: '/test-progressbar',
   plugins: [react()],
   // Чтобы не ругался на SCSS
   css: {
