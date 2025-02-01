@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# Тестовое задание. React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+В качестве способа реализации задачи выбран React + TS т.к. в вакансии требовался разработчик на React.
 
-Currently, two official plugins are available:
+## Зание:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Макет https://www.figma.com/design/0T1OVhpMyCrK9B3GsbFj7P/Untitled?node-id=0-1&p=f&t=4Df9nxsI0n05Xxs1-0
 
-## Expanding the ESLint configuration
+Респонсивная вёрстка от 320px(элементы в столбец) до 1200px(элементы в строку), на 425px(размер макета) должен выглядеть идентично мекету.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Частично заполненный прогрессбар инвертирует текст под заполненной частью.
 
-- Configure the top-level `parserOptions` property like this:
+Можно выбрать любой удобный инструментарий: сверстать это на голом html/css/js, на ts/react, либо на чём-то другом. Цель задания: получить качественную вёрстку.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Также был предоставлен образец поведения прогресс-бара:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Напутственное сообщение:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+На первом этапе мы проверяем исключительно способность верстать и только. Абсолютно не важно как будет вести себя приложение, но оно должно выглядеть как выглядит макет и предписывает ТЗ. Input-поля содержат значения, согласно макету. Прогрессбар можно статически зафиксировать на значении 65%.

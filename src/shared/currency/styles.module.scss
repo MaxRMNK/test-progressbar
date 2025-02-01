@@ -1,0 +1,35 @@
+.currency {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+  width: 100%;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid rgba(166, 166, 166, 0.4);
+}
+
+// Если вертикальная черта на макете не фокус на инпуте
+// .wrapper-input {
+// height: 42px;
+// border-right: 2px solid rgba(22, 22, 22, 1);
+// }
+
+.input {
+  min-width: 80px;
+  max-width: 100%;
+  color: rgba(22, 22, 22, 1);
+  font-size: 42px;
+  font-weight: 600;
+  // position: relative;
+  // top: -4px;
+  // background-color: #fcc;
+}
+
+.symbol {
+  padding: 6px 0;
+  flex-grow: 2;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(22, 138, 205, 1);
+}

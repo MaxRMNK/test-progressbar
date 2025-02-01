@@ -8,7 +8,10 @@ interface ProgressBarProps {
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = props => {
-  const { progress, segment = 4 } = props;
+  const {
+    progress,
+    // segment = 4
+  } = props;
 
   // const startValues = [];
   // for (let i = 1; i <= segment; ++i) {

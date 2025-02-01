@@ -3,21 +3,23 @@ import clsx from 'clsx';
 import classes from './styles.module.scss';
 
 import { ProgressBar } from '../../shared/progressbar/progressbar';
+import { Currency } from '../../shared/currency/currency';
 
 const App: React.FC = () => {
   // const [count, setCount] = useState(0)
 
   return (
     <div className={clsx(classes.page)}>
-      <ProgressBar progress={62} segment={2} />
+      <section className={clsx(classes.section, classes['first-rub'])}>
+        <Currency symbol="RUB" defaultValue={10000} />
+        <ProgressBar progress={65} segment={4} />
+      </section>
+      <section className={clsx(classes.section, classes['section-usdt'])}>
+        <Currency symbol="USDT" defaultValue={100} />
+        <ProgressBar progress={37} segment={4} />
+      </section>
     </div>
   );
-
-  //     return (
-  //         <div className="app-container">
-  //             <ProgressBar progress={65} />
-  //         </div>
-  //     );
 };
 
 export default App;
