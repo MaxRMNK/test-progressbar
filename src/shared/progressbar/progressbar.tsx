@@ -11,32 +11,23 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
   const { progress, segments = 4 } = props;
 
   const valueDictionary = {
-    1: [[0], [100]],
-    2: [
-      [0, 0],
-      [50, 100],
-    ],
-    4: [
-      [0, 0, 0, 0],
-      [25, 50, 75, 100],
-    ],
-    5: [
-      [0, 0, 0, 0, 0],
-      [20, 40, 60, 80, 100],
-    ],
+    1: { start: [0], values: [100] },
+    2: { start: [0, 0], values: [50, 100] },
+    4: { start: [0, 0, 0, 0], values: [25, 50, 75, 100] },
+    5: { start: [0, 0, 0, 0, 0], values: [20, 40, 60, 80, 100] },
   };
 
   const [segmentProgress, setSegmentProgress] = useState<number[]>(
     // [0, 0, 0, 0],
-    valueDictionary[segments][0],
+    valueDictionary[segments]['start'],
   );
 
   // const segmentPercentage = 100 / 4;
-  const segmentPercentage = 100 / valueDictionary[segments][0].length;
+  const segmentPercentage = 100 / valueDictionary[segments]['start'].length;
 
   const fillSegment = (index: number) => {
     // if (index >= segmentProgress.length) return;
-    if (index >= valueDictionary[segments][0].length) return;
+    if (index >= valueDictionary[segments]['start'].length) return;
 
     setTimeout(() => {
       setSegmentProgress(prev => {
@@ -66,7 +57,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
   return (
     <div className={clsx(classes['progress-bar'])}>
       {/* {[25, 50, 75, 100].map((label, index) => ( */}
-      {valueDictionary[segments][1].map((label, index) => (
+      {valueDictionary[segments]['values'].map((label, index) => (
         <div key={index} className={clsx(classes['segment'])}>
           <div className={clsx(classes['segment-label'])}>
             <div
