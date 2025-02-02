@@ -6,15 +6,15 @@
 
 [Макет в Figma](https://www.figma.com/design/0T1OVhpMyCrK9B3GsbFj7P/Untitled?node-id=0-1&p=f&t=4Df9nxsI0n05Xxs1-0)
 
-<div align="center" >
-  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="" width="300" target="_blank">
-</div>
-
-Респонсивная вёрстка от 320px(элементы в столбец) до 1200px(элементы в строку), на 425px(размер макета) должен выглядеть идентично мекету.
+Респонсивная вёрстка от 320px (элементы в столбец) до 1200px (элементы в строку), на 425px (размер макета) должен выглядеть идентично мекету.
 
 Частично заполненный прогрессбар инвертирует текст под заполненной частью.
 
 Можно выбрать любой удобный инструментарий: сверстать это на голом html/css/js, на ts/react, либо на чём-то другом. Цель задания: получить качественную вёрстку.
+
+<div align="center" >
+  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="" width="300" target="_blank">
+</div>
 
 Также был предоставлен образец поведения прогресс-бара:
 
