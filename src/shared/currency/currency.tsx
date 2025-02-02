@@ -18,13 +18,14 @@ export const Currency: React.FC<CurrencyProps> = props => {
   const symbolRef = useRef<HTMLDivElement | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Вариант валидации без TS
     // if (/^\d*$/.test(e.target.value)) {
     //   setValue(e.target.value);
     // }
     const newValue = e.target.value;
 
     // Ограничение на количество знаков (8), чтобы цифры не уходили из поля видимости на 320
-    if (newValue.length <= 8 && !isNaN(Number(newValue))) {
+    if (newValue.length <= 6 && !isNaN(Number(newValue))) {
       setValue(newValue === '' ? '' : Number(newValue));
     }
   };
