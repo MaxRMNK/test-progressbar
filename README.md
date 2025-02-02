@@ -1,11 +1,13 @@
 # Тестовое задание. React + TypeScript + Vite
 
+В качестве способа реализации задачи выбран React + TS т.к. в вакансии требовался разработчик на React.
+
 ## Зание
 
-Макет https://www.figma.com/design/0T1OVhpMyCrK9B3GsbFj7P/Untitled?node-id=0-1&p=f&t=4Df9nxsI0n05Xxs1-0
+[Макет в Figma](https://www.figma.com/design/0T1OVhpMyCrK9B3GsbFj7P/Untitled?node-id=0-1&p=f&t=4Df9nxsI0n05Xxs1-0)
 
 <div align="center" >
-  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="" width="300">
+  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="" width="300" target="_blank">
 </div>
 
 Респонсивная вёрстка от 320px(элементы в столбец) до 1200px(элементы в строку), на 425px(размер макета) должен выглядеть идентично мекету.
@@ -17,7 +19,7 @@
 Также был предоставлен образец поведения прогресс-бара:
 
 <div align="center" >
-  <img src="https://maxrmnk.github.io/test-progressbar/gif-preview.gif" alt="" width="300">
+  <img src="https://maxrmnk.github.io/test-progressbar/gif-preview.gif" alt="" width="300" target="_blank">
 </div>
 
 ### Напутственное сообщение:
@@ -26,12 +28,21 @@
 
 ## Решение
 
-В качестве способа реализации задачи выбран React + TS т.к. в вакансии требовался разработчик на React.
+- Самым сложным для меня стала верстка прогресс-бара. В поисках решения попробовал около десятка вариантов, но всегда что-то шло не так – мешали закругленные углы сегментов, не центрировались или не меняли цвет цифры слоя "прогресса". Как мне кажется, нашел оптимальный способ – перекрытие фона с помощью `clip-path`.
+
+- Расширяющиеся поля ввода сделаны двумя разными способами:
+
+  - Первый `input` – с помощью вычисления ширины по размеру содержимого. Так как символы разной ширины на больших числах справа становится много "лишнего пространства".
+  - Второй `input` – с помощью скрытой подложки в виде `span`, в нее дублируется значение `input` расширяя блок и двигая блок с обозначением валюты. Этот способ мне нравится больше, т.к. реализация проще и меньше шансов ошибиться.
+
+## Результат
+
+[Демо результата](https://maxrmnk.github.io/test-progressbar/)
 
 <div align="center">
-  <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="" width="200">
+  <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="" width="200" target="_blank">
 </div>
 
 <div align="center">
-  <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="" width="400">
+  <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="" width="400" target="_blank">
 </div>
