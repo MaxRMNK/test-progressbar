@@ -5,7 +5,7 @@
 Макет https://www.figma.com/design/0T1OVhpMyCrK9B3GsbFj7P/Untitled?node-id=0-1&p=f&t=4Df9nxsI0n05Xxs1-0
 
 <div align="center" >
-  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="">
+  <img src="https://maxrmnk.github.io/test-progressbar/model.jpg" alt="" width="300">
 </div>
 
 Респонсивная вёрстка от 320px(элементы в столбец) до 1200px(элементы в строку), на 425px(размер макета) должен выглядеть идентично мекету.
@@ -17,7 +17,7 @@
 Также был предоставлен образец поведения прогресс-бара:
 
 <div align="center" >
-  <img src="https://maxrmnk.github.io/test-progressbar/gif-preview.gif" alt="">
+  <img src="https://maxrmnk.github.io/test-progressbar/gif-preview.gif" alt="" width="300">
 </div>
 
 ### Напутственное сообщение:
@@ -28,10 +28,10 @@
 
 В качестве способа реализации задачи выбран React + TS т.к. в вакансии требовался разработчик на React.
 
-<div align="center" width="200" height="317">
-  <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="">
+<div align="center">
+  <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="" width="200">
 </div>
 
-<div align="center" width="400" height="214">
-  <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="">
+<div align="center">
+  <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="" width="400">
 </div>
