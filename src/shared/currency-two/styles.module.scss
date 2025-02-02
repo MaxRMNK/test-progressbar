@@ -1,0 +1,47 @@
+.currency {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.wrapper-input {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+
+  .resize-text,
+  .input {
+    margin: 0;
+    padding: 0;
+    min-width: 80px;
+    white-space: nowrap;
+    color: rgba(22, 22, 22, 1);
+    font-size: 42px;
+    font-weight: 600;
+  }
+
+  .resize-text {
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .input {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.symbol {
+  flex-grow: 2;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(22, 138, 205, 1);
+}

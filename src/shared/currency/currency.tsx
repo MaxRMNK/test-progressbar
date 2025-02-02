@@ -24,7 +24,7 @@ export const Currency: React.FC<CurrencyProps> = props => {
     const newValue = e.target.value;
 
     // Ограничение на количество знаков (8), чтобы цифры не уходили из поля видимости на 320
-    if (newValue.length <= 8 && !isNaN(Number(newValue))) {
+    if (newValue.length <= 6 && !isNaN(Number(newValue))) {
       setValue(newValue === '' ? '' : Number(newValue));
     }
   };
