@@ -30,9 +30,7 @@
 
 <div align="center">
   <img src="https://maxrmnk.github.io/test-progressbar/demo1.jpg" alt="" width="200" target="_blank">
-</div>
 
-<div align="center">
   <img src="https://maxrmnk.github.io/test-progressbar/demo2.jpg" alt="" width="400" target="_blank">
 </div>
 
