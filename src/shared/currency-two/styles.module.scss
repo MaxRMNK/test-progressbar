@@ -2,8 +2,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  align-content: center;
   gap: 5px;
   width: 100%;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid rgba(166, 166, 166, 0.4);
 }
 
 .wrapper-input {

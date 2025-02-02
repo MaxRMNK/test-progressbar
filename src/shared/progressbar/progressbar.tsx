@@ -4,29 +4,39 @@ import classes from './styles.module.scss';
 
 interface ProgressBarProps {
   progress: number;
-  segment?: 1 | 2 | 4 | 5;
-  // Не доделал. Была идея задавать количество сегментов.
+  segments?: 1 | 2 | 4 | 5;
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = props => {
-  const {
-    progress,
-    // segment = 4
-  } = props;
+  const { progress, segments = 4 } = props;
 
-  // const startValues = [];
-  // for (let i = 1; i <= segment; ++i) {
-  //   startValues.push(0);
-  // }
+  const valueDictionary = {
+    1: [[0], [100]],
+    2: [
+      [0, 0],
+      [50, 100],
+    ],
+    4: [
+      [0, 0, 0, 0],
+      [25, 50, 75, 100],
+    ],
+    5: [
+      [0, 0, 0, 0, 0],
+      [20, 40, 60, 80, 100],
+    ],
+  };
 
-  const [segmentProgress, setSegmentProgress] = useState<number[]>([
-    0, 0, 0, 0,
-  ]);
+  const [segmentProgress, setSegmentProgress] = useState<number[]>(
+    // [0, 0, 0, 0],
+    valueDictionary[segments][0],
+  );
 
-  const segmentPercentage = 100 / 4;
+  // const segmentPercentage = 100 / 4;
+  const segmentPercentage = 100 / valueDictionary[segments][0].length;
 
   const fillSegment = (index: number) => {
-    if (index >= segmentProgress.length) return;
+    // if (index >= segmentProgress.length) return;
+    if (index >= valueDictionary[segments][0].length) return;
 
     setTimeout(() => {
       setSegmentProgress(prev => {
@@ -51,11 +61,12 @@ export const ProgressBar: React.FC<ProgressBarProps> = props => {
 
   useEffect(() => {
     fillSegment(0);
-  }, [progress, segmentProgress]);
+  }, [progress]);
 
   return (
     <div className={clsx(classes['progress-bar'])}>
-      {[25, 50, 75, 100].map((label, index) => (
+      {/* {[25, 50, 75, 100].map((label, index) => ( */}
+      {valueDictionary[segments][1].map((label, index) => (
         <div key={index} className={clsx(classes['segment'])}>
           <div className={clsx(classes['segment-label'])}>
             <div

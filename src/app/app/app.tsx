@@ -14,12 +14,25 @@ const App: React.FC = () => {
       <section className={clsx(classes.section, classes['first-rub'])}>
         {/* Первый вариант расширяющегося Инпута */}
         <Currency symbol="RUB" defaultValue={10000} />
-        <ProgressBar progress={65} segment={4} />
+        <ProgressBar progress={65} />
       </section>
       <section className={clsx(classes.section, classes['section-usdt'])}>
         {/* Второй вариант расширяющегося Инпута */}
         <CurrencyTwo symbol="USDT" defaultValue={100} />
-        <ProgressBar progress={37} segment={4} />
+        <ProgressBar progress={37} />
+      </section>
+
+      <section className={clsx(classes.section, classes['section-usdt'])}>
+        <CurrencyTwo symbol="USDT" defaultValue={100} />
+        <ProgressBar progress={52} segments={1} />
+      </section>
+      <section className={clsx(classes.section, classes['section-usdt'])}>
+        <CurrencyTwo symbol="USDT" defaultValue={100} />
+        <ProgressBar progress={75} segments={2} />
+      </section>
+      <section className={clsx(classes.section, classes['section-usdt'])}>
+        <CurrencyTwo symbol="USDT" defaultValue={100} />
+        <ProgressBar progress={31} segments={5} />
       </section>
     </div>
   );
