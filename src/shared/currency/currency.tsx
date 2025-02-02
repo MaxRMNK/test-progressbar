@@ -18,6 +18,7 @@ export const Currency: React.FC<CurrencyProps> = props => {
   const symbolRef = useRef<HTMLDivElement | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Вариант валидации без TS
     // if (/^\d*$/.test(e.target.value)) {
     //   setValue(e.target.value);
     // }
