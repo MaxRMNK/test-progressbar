@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import clsx from 'clsx';
 import classes from './styles.module.scss';
 
@@ -7,8 +6,6 @@ import { Currency } from '../../shared/currency/currency';
 import { CurrencyTwo } from '../../shared/currency-two/currency-two';
 
 const App: React.FC = () => {
-  // const [count, setCount] = useState(0)
-
   return (
     <div className={clsx(classes.page)}>
       <section className={clsx(classes.section, classes['first-rub'])}>
@@ -22,7 +19,7 @@ const App: React.FC = () => {
         <ProgressBar progress={37} />
       </section>
 
-      <section className={clsx(classes.section, classes['section-usdt'])}>
+      <section className={clsx(classes.section, classes['section-progress'])}>
         <ProgressBar progress={52} segments={1} />
         <ProgressBar progress={75} segments={2} />
         <ProgressBar progress={31} segments={5} />
